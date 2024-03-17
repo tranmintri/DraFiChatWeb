@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/common/Avatar.jsx",
+    "src/components/Chatlist/ChatListHeader.jsx",
+    "src/components/Call/Container.jsx",
+    "src/components/Call/VideoCall.jsx",
+    "src/components/Call/VoiceCall.jsx",
+    "src/components/Chat/Chat.jsx",
+    "src/components/Chat/ChatContainer.jsx",
+    "src/components/Chat/ChatGroupContainer.jsx",
+    "src/components/Chat/ChatHeader.jsx",
+    "src/components/Chat/ImageMessage.jsx",
+    "src/components/Chat/MessageBar.jsx",
+    "src/components/Chat/SearchMessages.jsx",
+    "src/components/Chat/VoiceMessage.jsx",
+    "src/components/Chatlist/ChatList.jsx",
+    "src/components/Chatlist/ChatListHeader.jsx",
+    "src/components/Chatlist/ChatLIstItem.jsx",
+    "src/components/Chatlist/ContactsList.jsx",
+    "src/components/Chatlist/List.jsx",
+    "src/components/Chatlist/SearchBar.jsx",
+    "src/utils/ApiRoutes.js",
+    "src/utils/CalculateTime.js",
+    "src/utils/FirebaseConfig.js",
+    "src/pages/_app.jsx",
+    "src/pages/_document.jsx",
+    "src/components/Chatlist/ChatListHeader.jsx",
+    "src/utils/fecthData.js"
+  ],
+  "exclude": ["node_modules"]
+}
