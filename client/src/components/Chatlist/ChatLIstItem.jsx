@@ -22,6 +22,7 @@ function ChatLIstItem({
       const response = await axios.post(GET_CHAT_BY_PARTICIPANTS, {
         participants: [userInfo?.userId, data?.userId]
       });
+      console.log(data?.userId)
       console.log(response.data)
       const { chatId, name, email, deleteId, participants } = response.data
       dispatch({
