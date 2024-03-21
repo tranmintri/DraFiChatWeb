@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { ADD_USER } from "@/utils/ApiRoutes"
 import { reducerCases } from "@/context/constants";
 
-function onboarding() {
+function Onboarding() {
   const router = useRouter()
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
@@ -99,4 +99,4 @@ function onboarding() {
   );
 }
 
-export default onboarding;
+export default Onboarding;

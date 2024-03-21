@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-function register() {
+function Register() {
   return (
     <div className="flex justify-center items-center bg-panel-header-background h-screen w-screen flex-col gap-6  shadow-xl overflow-hidden">
       <p className="text-white text-4xl"> Create Account</p>
@@ -182,4 +182,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register;

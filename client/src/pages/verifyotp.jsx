@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function verifyotp() {
+function Verifyotp() {
   const [inputValues, setInputValues] = useState(["", "", "", "", "", ""]);
 
   const handleInputChange = (index, value) => {
@@ -41,4 +41,4 @@ function verifyotp() {
   );
 }
 
-export default verifyotp;
+export default Verifyotp;

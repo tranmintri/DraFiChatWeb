@@ -12,7 +12,7 @@ import { useStateProvider } from "@/context/StateContext";
 import { reducerCases } from "@/context/constants";
 
 
-function login() {
+function Login() {
   const router = useRouter()
   const [{ userInfo, newUser }, dispatch] = useStateProvider()
 
@@ -139,4 +139,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
