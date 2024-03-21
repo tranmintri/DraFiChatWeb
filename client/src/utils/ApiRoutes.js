@@ -1,5 +1,5 @@
-export const HOST = "http://localhost:8082";
-// export const HOST = "https://drafichatweb.onrender.com";
+// export const HOST = "http://localhost:8082";
+export const HOST = "https://drafichatweb.onrender.com";
 
 export const CHECK_USER_ROUTE = `${HOST}/api/users/email`;
 export const ADD_USER = `${HOST}/api/users/`;
