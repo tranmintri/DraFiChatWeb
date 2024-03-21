@@ -113,6 +113,7 @@ const getChatsByOneParticipantID = async (participantId) => {
 const getChatsByParticipants = async (participants) => {
     try {
         // Sắp xếp mảng participants trước khi truy vấn
+        console.log((participants))
         participants.sort();
         let chat = {}
         // Tìm các cuộc trò chuyện mà người dùng tham gia
@@ -120,22 +121,31 @@ const getChatsByParticipants = async (participants) => {
             .where('participants', 'array-contains-any', participants)
             .get();
 
-        if (snapshot.empty) {
-            const name = "none"
-            const chatId = uuidv4();
-            const data = { chatId, name, participants }
-            save(data)
-            return data;
-        } else {
-            const chats = [];
-            // Lặp qua từng tài liệu trong snapshot
-            snapshot.forEach((doc) => {
-                // Lấy dữ liệu của cuộc trò chuyện và thêm vào mảng chats
-                console.log(doc.data())
-                chat = doc.data();
-            });
-            return chat
+        snapshot.forEach((doc) => {
+            // Lấy dữ liệu của cuộc trò chuyện và thêm vào mảng chats
+
+            chat = doc.data();
+        });
+        let count =0
+
+        if(chat.participants.length == participants.length){
+            chat.participants.forEach(member =>{
+                participants.forEach(params =>{
+                    if (member == params) {
+                        count++
+                    }
+                })
+            })
+            if (count == participants.length){
+                return chat;
+            }
         }
+        const name = "none"
+        const chatId = uuidv4();
+        const data = {chatId, name, participants}
+        save(data)
+        return data;
+
     } catch (error) {
         throw new Error('Error getting chats by participants:', error);
     }
